@@ -1,0 +1,20 @@
+
+local frame_count = 0
+local total_time = 0
+
+function init(self)
+end
+
+function update(self, dt)
+	-- Update frame count and total time
+	frame_count = frame_count + 1
+	total_time = total_time + dt
+
+	-- Update the FPS text every second
+	if total_time >= 1.0 then
+		local fps = frame_count
+		gui.set_text(gui.get_node("fps_text"), "FPS: " .. fps)
+		frame_count = 0
+		total_time = 0
+	end
+end
