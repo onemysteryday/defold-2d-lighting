@@ -102,10 +102,10 @@ function init(self)
     self.quad_pred = render.predicate({"quad"})
 
     self.clear_color = vmath.vector4(0, 0, 0, 0)
-    self.clear_color.x = sys.get_config("render.clear_color_red", 0)
-    self.clear_color.y = sys.get_config("render.clear_color_green", 0)
-    self.clear_color.z = sys.get_config("render.clear_color_blue", 0)
-    self.clear_color.w = sys.get_config("render.clear_color_alpha", 0)
+    self.clear_color.x = sys.get_config_number("render.clear_color_red", 0)
+    self.clear_color.y = sys.get_config_number("render.clear_color_green", 0)
+    self.clear_color.z = sys.get_config_number("render.clear_color_blue", 0)
+    self.clear_color.w = sys.get_config_number("render.clear_color_alpha", 0)
 
     self.ambient_color = vmath.vector4(0.15, 0.15, 0.15, 1.0)
 
@@ -167,7 +167,7 @@ function update(self)
         set_default_render_state()
 
         render.draw(self.light_pred, {frustum = frustum})
-        render.draw(self.particle_pred, {frustum = frustum})
+        --render.draw(self.particle_pred, {frustum = frustum})
         render.draw_debug3d()
     end)
 

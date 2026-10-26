@@ -2,7 +2,6 @@ name: "sprite"
 tags: "light"
 vertex_program: "/main/materials/light.vp"
 fragment_program: "/main/materials/light.fp"
-vertex_space: VERTEX_SPACE_WORLD
 vertex_constants {
   name: "view_proj"
   type: CONSTANT_TYPE_VIEWPROJ
@@ -17,4 +16,3 @@ fragment_constants {
     w: 1.0
   }
 }
-max_page_count: 0

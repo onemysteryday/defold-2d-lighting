@@ -1,0 +1,5 @@
+script: "/main/render/lights.render_script"
+render_resources {
+  name: "lighting_quad"
+  path: "/main/materials/quad.material"
+}
